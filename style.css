@@ -1,0 +1,194 @@
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* MY CSS */
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --neutral-800: hsl(234, 12%, 34%);
+  --neutral-400: hsl(229, 6%, 66%);
+  --neutral-200: hsl(0, 0%, 98%);
+}
+
+body {
+  background-color: var(--neutral-200);
+  padding: 5.25rem 2rem;
+  display: grid;
+  row-gap: 4.75rem;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  max-width: 33.75rem;
+  color: var(--neutral-800);
+  text-align: center;
+  place-self: center;
+}
+
+h1,
+.text {
+  font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
+}
+
+.text {
+  font-weight: 200;
+  margin-bottom: 1px;
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+}
+
+main {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+section {
+  background-color: white;
+  padding: clamp(1.75rem, 0.376vw + 1.662rem, 2rem);
+  border-radius: 0.5rem;
+  border-top: 3.5px solid;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: clamp(0.063rem, 0.469vw - 0.048rem, 0.375rem);
+  color: var(--neutral-800);
+}
+
+section p {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.4375rem;
+  margin-bottom: clamp(2rem, 0.751vw + 1.824rem, 2.5rem);
+  color: var(--neutral-400);
+}
+
+.supervisor {
+  border-color: var(--cyan);
+}
+
+.team-builder {
+  border-color: var(--red);
+}
+
+.karma {
+  border-color: var(--orange);
+}
+
+.calculator {
+  border-color: var(--blue);
+}
+
+img {
+  min-width: 3.5rem;
+  max-width: 4rem;
+  justify-self: end;
+  align-self: end;
+}
+
+@media only screen and (min-width: 37.5rem) {
+  body {
+    padding: 5rem 10.25rem;
+    row-gap: 4rem;
+  }
+
+  section {
+    border-top: 4px solid;
+  }
+
+  main {
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 1.875rem;
+    row-gap: 1.875rem;
+    grid-template-areas:
+      ". t ."
+      "s t c"
+      "s k c"
+      ". k .";
+  }
+
+  .supervisor {
+    grid-area: s;
+    align-self: center;
+  }
+
+  .team-builder {
+    grid-area: t;
+    align-self: center;
+  }
+
+  .karma {
+    grid-area: k;
+    align-self: center;
+  }
+
+  .calculator {
+    grid-area: c;
+    align-self: center;
+  }
+}
