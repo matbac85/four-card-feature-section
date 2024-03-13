@@ -61,17 +61,19 @@ h6 {
 body {
   background-color: var(--neutral-200);
   padding: 5.25rem 2rem;
-  display: grid;
-  row-gap: 4.75rem;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
   max-width: 33.75rem;
   color: var(--neutral-800);
   text-align: center;
-  place-self: center;
+  margin-bottom: 4.75rem;
 }
 
 h1,
@@ -127,41 +129,33 @@ section p {
   color: var(--neutral-400);
 }
 
-.supervisor {
+#supervisor {
   border-color: var(--cyan);
 }
-
-.team-builder {
+#team-builder {
   border-color: var(--red);
 }
-
-.karma {
+#karma {
   border-color: var(--orange);
 }
-
-.calculator {
+#calculator {
   border-color: var(--blue);
 }
 
 img {
-  min-width: 3.5rem;
-  max-width: 4rem;
+  max-width: clamp(3.5rem, 0.751vw + 3.324rem, 4rem);
   justify-self: end;
   align-self: end;
 }
 
 @media only screen and (min-width: 37.5rem) {
-  body {
-    padding: 5rem 10.25rem;
-    row-gap: 4rem;
-  }
-
   section {
     border-top: 4px solid;
   }
 
   main {
-    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    max-width: 69.375rem;
+    grid-template-columns: repeat(3, minmax(21.875rem, 1fr));
     grid-template-rows: repeat(4, 1fr);
     column-gap: 1.875rem;
     row-gap: 1.875rem;
@@ -172,23 +166,27 @@ img {
       ". k .";
   }
 
-  .supervisor {
+  header {
+    margin-bottom: 4rem;
+  }
+
+  #supervisor,
+  #team-builder,
+  #karma,
+  #calculator {
+    align-self: center;
+  }
+
+  #supervisor {
     grid-area: s;
-    align-self: center;
   }
-
-  .team-builder {
+  #team-builder {
     grid-area: t;
-    align-self: center;
   }
-
-  .karma {
+  #karma {
     grid-area: k;
-    align-self: center;
   }
-
-  .calculator {
+  #calculator {
     grid-area: c;
-    align-self: center;
   }
 }
