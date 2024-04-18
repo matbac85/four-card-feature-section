@@ -1,3 +1,3 @@
 ### Another Frontend Mentor Challenge Conquered!
 
-I've successfully completed another Frontend Mentor challenge. Check out my work by clicking on this link: [Four Card Feature Section](https://matbac85.github.io/four_card_feature_section/)
+I've successfully completed another Frontend Mentor challenge. Check out my work by clicking on this link: [Four Card Feature Section](https://matbac85.github.io/four-card-feature-section/)
